@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Get base URL for assets
+const baseUrl = import.meta.env.BASE_URL;
+
 // Special Cards Section Component
 const SpecialCardsSection = ({ onComplete }) => {
     const [flippedCards, setFlippedCards] = useState({});
@@ -9,19 +12,19 @@ const SpecialCardsSection = ({ onComplete }) => {
     const cards = [
         {
             id: 1,
-            frontImage: <img src="img1.png" alt="Bow" className="w-24 h-24" />,
-            // frontIcon: <img src="img1.png" alt="Hearts" className="w-20 h-20" />,
+            frontImage: <img src={`${baseUrl}img1.png`} alt="Bow" className="w-24 h-24" />,
+            // frontIcon: <img src={`${baseUrl}img1.png`} alt="Hearts" className="w-20 h-20" />,
             message: "Eshuu Meri Billii, Tum Mery Liye Buhat Special Ho. 💖"
         },
         {
             id: 2,
-            frontImage: <img src="img3.webp" alt="Hearts" className="w-20 h-20" />,
+            frontImage: <img src={`${baseUrl}img3.webp`} alt="Hearts" className="w-20 h-20" />,
             // frontIcon: "💌",
             message: "Ye Hamza tum sy buhat payar karta hai, I Love You Alote <3✨"
         },
         {
             id: 3,
-            frontImage: <img src="img2.jpg" alt="Hearts" className="w-20 h-20" />,
+            frontImage: <img src={`${baseUrl}img2.jpg`} alt="Hearts" className="w-20 h-20" />,
             // frontIcon: "🕷️",
             message: "Ye Sepcial Gift, Mery sab sy special shaks ka liyee, My Eshuu 💖"
         }
